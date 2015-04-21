@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHS_tb_isim_beh.exe" -prj "C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHS_tb_beh.prj" "work.TwoPhaseHS_tb" "work.glbl" 

@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/xst"
+elaborate
+-ifn TwoPhaseHandshake.prj
+-ifmt mixed

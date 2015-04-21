@@ -1,0 +1,414 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> Reading design: TwoPhaseHandshakeSchem.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TwoPhaseHandshakeSchem.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TwoPhaseHandshakeSchem"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : TwoPhaseHandshakeSchem
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "TwoPhaseHandshakeSchem.vf" in library work
+Module <TwoPhaseHandshakeSchem> compiled
+No errors in compilation
+Analysis of file <"TwoPhaseHandshakeSchem.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <TwoPhaseHandshakeSchem> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <TwoPhaseHandshakeSchem>.
+Module <TwoPhaseHandshakeSchem> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <SysADF1> in unit <TwoPhaseHandshakeSchem>.
+    Set user-defined property "INIT =  0" for instance <SysADF2> in unit <TwoPhaseHandshakeSchem>.
+    Set user-defined property "INIT =  0" for instance <SysASync1> in unit <TwoPhaseHandshakeSchem>.
+    Set user-defined property "INIT =  0" for instance <SysASync2> in unit <TwoPhaseHandshakeSchem>.
+    Set user-defined property "INIT =  0" for instance <SysBDF1> in unit <TwoPhaseHandshakeSchem>.
+    Set user-defined property "INIT =  0" for instance <SysBDF2> in unit <TwoPhaseHandshakeSchem>.
+    Set user-defined property "INIT =  0" for instance <SysBEN> in unit <TwoPhaseHandshakeSchem>.
+    Set user-defined property "INIT =  0" for instance <SysBSync1> in unit <TwoPhaseHandshakeSchem>.
+    Set user-defined property "INIT =  0" for instance <SysBSync2> in unit <TwoPhaseHandshakeSchem>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <TwoPhaseHandshakeSchem>.
+    Related source file is "TwoPhaseHandshakeSchem.vf".
+Unit <TwoPhaseHandshakeSchem> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TwoPhaseHandshakeSchem> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TwoPhaseHandshakeSchem, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TwoPhaseHandshakeSchem.ngr
+Top Level Output File Name         : TwoPhaseHandshakeSchem
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 9
+
+Cell Usage :
+# BELS                             : 4
+#      XOR2                        : 4
+# FlipFlops/Latches                : 9
+#      FD                          : 8
+#      FDE                         : 1
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 7
+#      IBUF                        : 2
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                        5  out of   1920     0%  
+ Number of Slice Flip Flops:              9  out of   3840     0%  
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    173     5%  
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clkA                               | BUFGP                  | 4     |
+clkB                               | BUFGP                  | 5     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 4.610ns (Maximum Frequency: 216.920MHz)
+   Minimum input arrival time before clock: 3.177ns
+   Maximum output required time after clock: 8.699ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkA'
+  Clock period: 3.182ns (frequency: 314.268MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               3.182ns (Levels of Logic = 1)
+  Source:            SysADF2 (FF)
+  Destination:       SysADF2 (FF)
+  Source Clock:      clkA rising
+  Destination Clock: clkA rising
+
+  Data Path: SysADF2 to SysADF2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.720   0.907  SysADF2 (Req_OBUF)
+     XOR2:I0->O            1   0.551   0.801  SysAxor (SysAxorOUT)
+     FD:D                      0.203          SysADF2
+    ----------------------------------------
+    Total                      3.182ns (1.474ns logic, 1.708ns route)
+                                       (46.3% logic, 53.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkB'
+  Clock period: 4.610ns (frequency: 216.920MHz)
+  Total number of paths / destination ports: 7 / 4
+-------------------------------------------------------------------------
+Delay:               4.610ns (Levels of Logic = 2)
+  Source:            SysBSync2 (FF)
+  Destination:       SysBDF2 (FF)
+  Source Clock:      clkB rising
+  Destination Clock: clkB rising
+
+  Data Path: SysBSync2 to SysBDF2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.720   0.877  SysBSync2 (SysBSyncOUT)
+     XOR2:I0->O            3   0.551   0.907  ReqBxor (ReqB_OBUF)
+     XOR2:I1->O            1   0.551   0.801  SysBxor (SysBxorOUT)
+     FD:D                      0.203          SysBDF2
+    ----------------------------------------
+    Total                      4.610ns (2.025ns logic, 2.585ns route)
+                                       (43.9% logic, 56.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clkA'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.177ns (Levels of Logic = 2)
+  Source:            ReqA (PAD)
+  Destination:       SysADF2 (FF)
+  Destination Clock: clkA rising
+
+  Data Path: ReqA to SysADF2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  ReqA_IBUF (ReqA_IBUF)
+     XOR2:I1->O            1   0.551   0.801  SysAxor (SysAxorOUT)
+     FD:D                      0.203          SysADF2
+    ----------------------------------------
+    Total                      3.177ns (1.575ns logic, 1.602ns route)
+                                       (49.6% logic, 50.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clkB'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.825ns (Levels of Logic = 1)
+  Source:            DataA (PAD)
+  Destination:       SysBEN (FF)
+  Destination Clock: clkB rising
+
+  Data Path: DataA to SysBEN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  DataA_IBUF (DataA_IBUF)
+     FDE:D                     0.203          SysBEN
+    ----------------------------------------
+    Total                      1.825ns (1.024ns logic, 0.801ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clkA'
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Offset:              8.593ns (Levels of Logic = 2)
+  Source:            SysASync1 (FF)
+  Destination:       AckA (PAD)
+  Source Clock:      clkA rising
+
+  Data Path: SysASync1 to AckA
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.720   0.877  SysASync1 (SysASyncOUT)
+     XOR2:I0->O            1   0.551   0.801  AckAxor (AckA_OBUF)
+     OBUF:I->O                 5.644          AckA_OBUF (AckA)
+    ----------------------------------------
+    Total                      8.593ns (6.915ns logic, 1.678ns route)
+                                       (80.5% logic, 19.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clkB'
+  Total number of paths / destination ports: 4 / 3
+-------------------------------------------------------------------------
+Offset:              8.699ns (Levels of Logic = 2)
+  Source:            SysBSync2 (FF)
+  Destination:       ReqB (PAD)
+  Source Clock:      clkB rising
+
+  Data Path: SysBSync2 to ReqB
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.720   0.877  SysBSync2 (SysBSyncOUT)
+     XOR2:I0->O            3   0.551   0.907  ReqBxor (ReqB_OBUF)
+     OBUF:I->O                 5.644          ReqB_OBUF (ReqB)
+    ----------------------------------------
+    Total                      8.699ns (6.915ns logic, 1.784ns route)
+                                       (79.5% logic, 20.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.99 secs
+ 
+--> 
+
+Total memory usage is 254472 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

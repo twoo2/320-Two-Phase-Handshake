@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHandshakeSchem.xst" -ofn "C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHandshakeSchem.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-ft256-4 TwoPhaseHandshakeSchem.ngc TwoPhaseHandshakeSchem.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o TwoPhaseHandshakeSchem_map.ncd TwoPhaseHandshakeSchem.ngd TwoPhaseHandshakeSchem.pcf 
+par -w -intstyle ise -ol high -t 1 TwoPhaseHandshakeSchem_map.ncd TwoPhaseHandshakeSchem.ncd TwoPhaseHandshakeSchem.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TwoPhaseHandshakeSchem.twx TwoPhaseHandshakeSchem.ncd -o TwoPhaseHandshakeSchem.twr TwoPhaseHandshakeSchem.pcf 
+bitgen -intstyle ise -f TwoPhaseHandshakeSchem.ut TwoPhaseHandshakeSchem.ncd 
+sch2sym -intstyle ise -family spartan3 -refsym TwoPhaseHandshakeSchem C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHandshakeSchem.sch C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHandshakeSchem.sym 
+xst -intstyle ise -ifn "C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHandshakeSchem.xst" -ofn "C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHandshakeSchem.syr" 
+xst -intstyle ise -ifn "C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHandshakeSchem.xst" -ofn "C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHandshakeSchem.syr" 
+xst -intstyle ise -ifn "C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHandshakeSchem.xst" -ofn "C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHandshakeSchem.syr" 

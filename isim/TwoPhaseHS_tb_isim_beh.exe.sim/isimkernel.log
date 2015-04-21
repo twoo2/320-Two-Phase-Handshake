@@ -1,0 +1,10 @@
+Command line:
+   TwoPhaseHS_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54211
+
+Tue Dec 02 21:37:38 2014
+
+
+ Elaboration Time: 0.0156 sec

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Wooster\Documents\CSE320\Homework6\HW6\Problem3\TwoPhaseHandshakeSchem.ncd
+OUTFILE=C:\Users\Wooster\Documents\CSE320\Homework6\HW6\Problem3\TwoPhaseHandshakeSchem.bit
+FAMILY=Spartan3
+PART=xc3s200-4ft256
+WORKINGDIR=C:\Users\Wooster\Documents\CSE320\Homework6\HW6\Problem3
+LICENSE=WebPack
+USER_INFO=210944666_0_0_030

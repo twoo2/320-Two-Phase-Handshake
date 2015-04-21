@@ -1,0 +1,98 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : TwoPhaseHandshakeSchem.vf
+// /___/   /\     Timestamp : 12/02/2014 20:52:20
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHandshakeSchem.vf -w C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHandshakeSchem.sch
+//Design Name: TwoPhaseHandshakeSchem
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module TwoPhaseHandshakeSchem(clkA, 
+                              clkB, 
+                              DataA, 
+                              ReqA, 
+                              Ack, 
+                              AckA, 
+                              DataB, 
+                              Req, 
+                              ReqB);
+
+    input clkA;
+    input clkB;
+    input DataA;
+    input ReqA;
+   output Ack;
+   output AckA;
+   output DataB;
+   output Req;
+   output ReqB;
+   
+   wire SysADFOUT;
+   wire SysASync;
+   wire SysASyncOUT;
+   wire SysAxorOUT;
+   wire SysBDFOUT;
+   wire SysBSync;
+   wire SysBSyncOUT;
+   wire SysBxorOUT;
+   wire ReqB_DUMMY;
+   wire Ack_DUMMY;
+   wire Req_DUMMY;
+   
+   assign Ack = Ack_DUMMY;
+   assign Req = Req_DUMMY;
+   assign ReqB = ReqB_DUMMY;
+   XOR2  AckAxor (.I0(SysASyncOUT), 
+                 .I1(SysADFOUT), 
+                 .O(AckA));
+   XOR2  ReqBxor (.I0(SysBSyncOUT), 
+                 .I1(SysBDFOUT), 
+                 .O(ReqB_DUMMY));
+   FD #( .INIT(1'b0) ) SysADF1 (.C(clkA), 
+               .D(SysASyncOUT), 
+               .Q(SysADFOUT));
+   FD #( .INIT(1'b0) ) SysADF2 (.C(clkA), 
+               .D(SysAxorOUT), 
+               .Q(Req_DUMMY));
+   FD #( .INIT(1'b0) ) SysASync1 (.C(clkA), 
+                 .D(SysASync), 
+                 .Q(SysASyncOUT));
+   FD #( .INIT(1'b0) ) SysASync2 (.C(clkA), 
+                 .D(Ack_DUMMY), 
+                 .Q(SysASync));
+   XOR2  SysAxor (.I0(Req_DUMMY), 
+                 .I1(ReqA), 
+                 .O(SysAxorOUT));
+   FD #( .INIT(1'b0) ) SysBDF1 (.C(clkB), 
+               .D(SysBSyncOUT), 
+               .Q(SysBDFOUT));
+   FD #( .INIT(1'b0) ) SysBDF2 (.C(clkB), 
+               .D(SysBxorOUT), 
+               .Q(Ack_DUMMY));
+   FDE #( .INIT(1'b0) ) SysBEN (.C(clkB), 
+               .CE(ReqB_DUMMY), 
+               .D(DataA), 
+               .Q(DataB));
+   FD #( .INIT(1'b0) ) SysBSync1 (.C(clkB), 
+                 .D(Req_DUMMY), 
+                 .Q(SysBSync));
+   FD #( .INIT(1'b0) ) SysBSync2 (.C(clkB), 
+                 .D(SysBSync), 
+                 .Q(SysBSyncOUT));
+   XOR2  SysBxor (.I0(Ack_DUMMY), 
+                 .I1(ReqB_DUMMY), 
+                 .O(SysBxorOUT));
+endmodule

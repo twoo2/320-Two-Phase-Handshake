@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Wooster/Documents/CSE320/Homework6/HW6/Problem3/TwoPhaseHS_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="TwoPhaseHS_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/TwoPhaseHS_tb/clkA" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clkA</obj_property>
+      <obj_property name="ObjectShortName">clkA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TwoPhaseHS_tb/clkB" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clkB</obj_property>
+      <obj_property name="ObjectShortName">clkB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TwoPhaseHS_tb/ReqA" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ReqA</obj_property>
+      <obj_property name="ObjectShortName">ReqA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TwoPhaseHS_tb/Req" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Req</obj_property>
+      <obj_property name="ObjectShortName">Req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TwoPhaseHS_tb/ReqB" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ReqB</obj_property>
+      <obj_property name="ObjectShortName">ReqB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TwoPhaseHS_tb/Ack" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Ack</obj_property>
+      <obj_property name="ObjectShortName">Ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TwoPhaseHS_tb/AckA" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">AckA</obj_property>
+      <obj_property name="ObjectShortName">AckA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TwoPhaseHS_tb/DataA" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">DataA</obj_property>
+      <obj_property name="ObjectShortName">DataA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TwoPhaseHS_tb/DataB" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">DataB</obj_property>
+      <obj_property name="ObjectShortName">DataB</obj_property>
+   </wvobject>
+</wave_config>
